@@ -10,8 +10,7 @@ class RadioButtonPage(BasePage):
     NO_RADIO_INPUT = (By.ID, "noRadio")
     SUCCESS_TEXT = (By.CLASS_NAME, "text-success")
 
-
-    ALL_LABELS = (By.XPATH, "//div[contains(@class, 'custom-radio')]/label")
+    ALL_LABELS = (By.XPATH, "//label[@for='yesRadio' or @for='impressiveRadio' or @for='noRadio']")
 
     def open_page(self):
         self.open(self.URL)
